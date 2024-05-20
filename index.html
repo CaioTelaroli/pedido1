@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <title>Vamo?</title> 
+    </head>
+    <body>
+        <div id="content">
+            <h1>Vc é boiola?</h1>
+            <div id="botoes">
+                <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
+                <button style="position: absolute;" class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function sim() {
+            alert("Ainda bem q sabe, gatinha boila");
+            location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+        }
+
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('ah para, eu sei que quer');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</html>
